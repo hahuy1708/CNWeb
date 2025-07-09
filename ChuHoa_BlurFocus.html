@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script lang="javascript">
+        function ChuHoa() {
+            var chuoi = document.f1.t1.value; // Lấy giá trị từ ô t1
+            var chuoiHoa = chuoi.toUpperCase(); // Chuyển đổi thành chữ hoa
+            document.f1.t2.value = chuoiHoa; // Gán lại giá trị cho ô t2
+        }
+        </script>
+        <script lang="javascript">
+        function BlurFocus(){
+            var st = document.f1.t1.value; // Lấy giá trị từ ô t1
+            document.f1.t2.value = st.toUpperCase();
+        }
+        </script>
+</head>
+<body onload="document.f1.t1.focus()">
+    <form name = f1 method="" action="">
+        <Input type="text" name = "t1" value="" onBlur = "BlurFocus()">
+        <Input type="text" name = "t2" value="">
+    </form>
+
+</body>
+</html>
+ 
