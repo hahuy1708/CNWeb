@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+</head>
+<body bgcolor="lightgreen">
+
+  <center>
+    <form onsubmit="return validateForm()">
+      <table border="0" cellspacing="10">
+        <tr>
+          <th colspan="2">Login</th>
+        </tr>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" id = "username" name="username"></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" id = "password" name="password"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="OK">
+            <input type="reset" value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </center>
+
+  <script>
+    function validateForm(){
+        var username = document.getElementById("username").value.trim();
+        var password = document.getElementById("password").value.trim();
+        if (username === "" || password === "") {
+            alert("username và password không được để trống.");
+            return false;
+        }
+        if( username.length > 10 || password.length > 15) {
+            alert("Username và Password phải có độ dài bé hơn là 10 và 15 ký tự.");
+            return false;
+        }
+        return true;
+    }
+
+  </script>
+</body>
+</html>
