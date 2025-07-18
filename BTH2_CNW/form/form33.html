@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 33</title>
+    <script>
+        function Form33(){
+            var text1 = document.getElementById("text1").value;
+            var result = "";
+            for(let i = 0; i < text1.length; i++){
+                if(text1[i] == text1[i].toUpperCase()){
+                    result += text1[i].toLowerCase();
+                } else {
+                    result += text1[i].toUpperCase();
+                }
+            }
+            document.getElementById("text2").value = result;
+        }
+        window.onload = function() {
+            document.getElementById("text1").focus();
+            };
+    </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="text1" value ="" onblur="Form33()">
+        <input type="text" id="text2" value="" readonly>
+    </form>
+    
+</body>
+</html>
