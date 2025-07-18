@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Form 22</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h2 {
+      color: #004080;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="course-list"></div>
+
+  <script>
+    var course = [
+      { title: "Java", author: "PMT", content: "OOP, Java Core", price: 100 },
+      { title: "C#",  author: "VDH", content: "OOP, C# Core, .NET MVC", price: 150 },
+    ];
+
+    var html = "";
+    for (var i = 0; i < course.length; i++) {
+      var c = course[i];
+      html += `
+        <div style="background:#fff;padding:15px;margin-bottom:10px;border-radius:4px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+          <h2>${c.title}</h2>
+          <p><strong>Author:</strong> ${c.author}</p>
+          <p><strong>Content:</strong> ${c.content}</p>
+          <p><strong>Price:</strong> $${c.price}</p>
+        </div>
+      `;
+    }
+
+    document.getElementById("course-list").innerHTML = html;
+  </script>
+
+</body>
+</html>
